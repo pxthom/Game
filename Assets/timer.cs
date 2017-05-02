@@ -1,38 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class timer : MonoBehaviour {
+public class Timer : MonoBehaviour {
 
+    public Text counterText;
 
-	// In this example we show how to invoke a coroutine and
-	// continue executing the function in parallel.
+    public float seconds, minutes;
 
-	private IEnumerator coroutine;
-
-	void Start()
-	{
-		// - After 0 seconds, prints "Starting 0.0"
-		// - After 0 seconds, prints "Before WaitAndPrint Finishes 0.0"
-		// - After 2 seconds, prints "WaitAndPrint 2.0"
-		print("Starting " + Time.time);
-
-		// Start function WaitAndPrint as a coroutine.
-
-		coroutine = WaitAndPrint(1.0f);
-		StartCoroutine(coroutine);
-
-		print("Before WaitAndPrint Finishes " + Time.time);
+	// Use this for initialization
+	void Start () {
+        counterText = GetComponent<Text>() as Text;
 	}
-
-	// every 2 seconds perform the print()
-	private IEnumerator WaitAndPrint(float waitTime)
-	{
-		while (true)
-		{
-			yield return new WaitForSeconds(waitTime);
-			print("WaitAndPrint " + Time.time);
-		}
+	
+	// Update is called once per frame
+	void Update () {
+        minutes = (int)(Time.time / 60f);
+        seconds = (int)(Time.time % 60f);
+        counterText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+		
 	}
 }
-

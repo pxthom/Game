@@ -49,7 +49,12 @@
      <Compile Include="Assets\Campfire\Script\FireLightScript.cs" />
      <Compile Include="Assets\Destroyed_city\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Destroyed_city\Standard Assets\Water (Pro Only)\Sources\Scripts\Water.cs" />
-     <Compile Include="Assets\timer.cs" />
+     <Compile Include="Assets\Rotator.cs" />
+     <Compile Include="Assets\Timer.cs" />
+     <Compile Include="Assets\picked.cs" />
+     <Compile Include="Assets\pickup.cs" />
+     <Compile Include="Assets\quit.cs" />
+     <Compile Include="Assets\timer1.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Destroyed_city\Destroyed_city_FREE_Info.txt" />
      <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\DiffuseReflectiveShader.shader" />
